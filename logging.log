@@ -165,3 +165,5 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'book.books_loan_set' doesn't
 2022-06-04 15:31:24.160  WARN 1488 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2022-06-04 15:31:24.351  INFO 1488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2022-06-04 15:31:24.359  INFO 1488 --- [main] c.e.b.BookManagementSoftwareApplication  : Started BookManagementSoftwareApplication in 2.361 seconds (JVM running for 2.716)
+2022-06-04 16:17:09.003  WARN 1488 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m15s214ms).
+2022-06-04 16:30:57.044  WARN 1488 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m47s987ms).
