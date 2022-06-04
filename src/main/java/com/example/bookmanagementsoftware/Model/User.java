@@ -20,7 +20,5 @@ public class User {
     private String password;
 
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonIgnore
-    private Set<Books> booksSet;
+
 }

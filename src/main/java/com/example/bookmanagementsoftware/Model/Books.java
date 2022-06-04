@@ -24,7 +24,5 @@ public class Books {
     @ManyToMany(cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Loan> loanSet;
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    private User user;
+    
 }

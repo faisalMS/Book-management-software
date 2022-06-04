@@ -1,6 +1,7 @@
 package com.example.bookmanagementsoftware.Model;
 
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,6 +23,7 @@ public class Loan {
     @Column(nullable = false)
     private Integer bookID;
 
-    @ManyToMany(mappedBy = "loanSet", cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
     private Set<Books> booksSet;
 }
+
