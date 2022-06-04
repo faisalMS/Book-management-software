@@ -21,8 +21,8 @@ public class Books {
     @Column(nullable = false)
     private String genre;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "booksSet", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Loan> loanSet;
-    
+
 }
