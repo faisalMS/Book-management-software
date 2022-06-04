@@ -41,11 +41,11 @@ public class LoanService {
         booksSet1.add(user);
         Set<Books> booksSet = new HashSet<>();
         booksSet.add(books);
-        Loan loan = new Loan(null, loanDTO.getBooksId(), loanDTO.getUserId(), booksSet);
+        Loan loan = new Loan(null, loanDTO.getBooksId(), loanDTO.getUserId(),booksSet, user);
         loanRepository.save(loan);
     }
 
-    public void lended(Integer bookId, Integer loanId) {
+    public String lended(Integer bookId, Integer loanId) {
         Books books = booksRepository.findById(bookId).
                 orElseThrow(() -> new InvalidIDException("Invalid bookId !"));
         Loan loan = loanRepository.findById(loanId).
@@ -53,6 +53,8 @@ public class LoanService {
         Set<Books> booksSet = loan.getBooksSet();
         booksSet.remove(books);
         loanRepository.save(loan);
+        booksRepository.save(books);
+        return "complete";
     }
 
 }

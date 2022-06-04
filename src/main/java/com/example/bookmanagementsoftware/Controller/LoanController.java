@@ -29,6 +29,7 @@ public class LoanController {
     @PostMapping
     private ResponseEntity<Api> addLoans(@RequestBody Loan loan){
         logger.info("addLoans");
+        loanService.addLoans(loan);
         return ResponseEntity.status(HttpStatus.OK).body(new Api("User added !", 200));
     }
 

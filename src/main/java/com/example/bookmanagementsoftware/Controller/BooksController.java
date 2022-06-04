@@ -32,6 +32,7 @@ public class BooksController {
     @PostMapping
     private ResponseEntity<Api> addBooks(@RequestBody @Valid Books books){
         logger.info("addBooks");
+        booksService.addBooks(books);
         return ResponseEntity.status(HttpStatus.OK).body(new Api("User added !", 200));
     }
 }

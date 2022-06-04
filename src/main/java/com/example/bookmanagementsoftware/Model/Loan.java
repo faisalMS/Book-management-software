@@ -2,7 +2,6 @@ package com.example.bookmanagementsoftware.Model;
 
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,5 +24,8 @@ public class Loan {
 
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Books> booksSet;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private User users;
 }
 

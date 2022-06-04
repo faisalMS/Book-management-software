@@ -20,5 +20,7 @@ public class User {
     private String password;
 
 
-
+    @OneToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Loan> loanSet;
 }
